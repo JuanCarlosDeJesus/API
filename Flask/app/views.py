@@ -1,3 +1,4 @@
+# from the app package (folder) we are importing the app Flask object we initialized from the __init__.py file
 from app import app
 
 

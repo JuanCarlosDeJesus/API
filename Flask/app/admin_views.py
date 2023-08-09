@@ -3,11 +3,11 @@ from app import app
 
 
 # create route decorator
-@app.route("/")
-def index():
-    return "Hello World!"
+@app.route("/admin/dashboard")
+def admin_dashboard():
+    return "Admin Dashboard"
 
 # create /about decorator
-@app.route("/about")
-def about():
-    return "<h1 style='color: red'>About Page!</h1>"
+@app.route("/admin_profile")
+def admin_profile():
+    return "Admin Profile"
