@@ -6,7 +6,7 @@ from flask import render_template
 # create route decorator
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("public/index.html")
 
 # create /about decorator
 @app.route("/about")
