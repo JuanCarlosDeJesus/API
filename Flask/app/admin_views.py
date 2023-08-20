@@ -9,6 +9,6 @@ def admin_dashboard():
     return render_template("admin/dashboard.html")
 
 # create /about decorator
-@app.route("/admin_profile")
+@app.route("/admin/profile")
 def admin_profile():
     return "Admin Profile"
