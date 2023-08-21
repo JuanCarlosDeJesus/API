@@ -1,4 +1,4 @@
-# Package file - all imports done here
+# By adding the __init__.py in the app folder you turned it into a module. Package file - all imports done here
 from flask import Flask
 
 

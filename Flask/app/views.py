@@ -8,7 +8,11 @@ from flask import render_template
 def index():
     return render_template("public/index.html")
 
+@app.route("/jinja")
+def jinja():
+    return render_template("public/jinja.html")
+
 # create /about decorator
 @app.route("/about")
 def about():
-    return "<h1 style='color: red'>About Page!</h1>"
+    return render_template("public/about.html")
