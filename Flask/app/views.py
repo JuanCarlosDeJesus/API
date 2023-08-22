@@ -10,7 +10,10 @@ def index():
 
 @app.route("/jinja")
 def jinja():
-    return render_template("public/jinja.html")
+    
+    my_name = "Carl"
+    
+    return render_template("public/jinja.html", my_name = my_name)
 
 # create /about decorator
 @app.route("/about")
