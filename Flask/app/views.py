@@ -11,9 +11,51 @@ def index():
 @app.route("/jinja")
 def jinja():
     
-    my_name = "Carl"
+    my_name = "Carl"    
+    age = 52
+    langs = ['Visual Basic','HTML','Python','Javascript']
+    friends = {
+        'Tom': 34,
+        'Amy': 60,
+        'Tony': 56,
+        'Clarissa': 23
+        }
+    colors = ['Red','Green']
+    cool = True
     
-    return render_template("public/jinja.html", my_name = my_name)
+    class GitRemote:
+        def __init__(self, name, description, url):
+            self.name = name
+            self.description = description
+            self.url = url
+        
+        def pull(self):
+            return f"Pulling Repo {self.name}"
+        
+        def clone(self):
+            return f"Cloning Repo {self.url}"
+    
+    my_remote = GitRemote(
+        name = "Flask Jinja",
+        description = "Template design Tutorial",
+        url = "https://github/JuanCarlosDeJesus/jinja.git"
+    )
+    
+    def repeat(x, qty):
+        return x * qty
+              
+    
+    return render_template("public/jinja.html",
+                            my_name = my_name,
+                            age=age,
+                            langs=langs,
+                            friends=friends,
+                            colors=colors,
+                            cool=cool,
+                            GitRemote=GitRemote,
+                            repeat=repeat,
+                            my_remote=my_remote
+                            )
 
 # create /about decorator
 @app.route("/about")
