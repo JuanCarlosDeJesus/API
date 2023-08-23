@@ -41,6 +41,36 @@
                 <li>{{ k }}: {{ v }}</li>
                 {% endfor %}
             </ul>
+            <h4>Looping with Dictionary keys</h4>
+            <hr>
+            <ul>
+                {% for k in friends.keys()  %}
+                <li>{{ k }}</li>
+                {% endfor %}
+            </ul>
+
+            <!-- Access dict member -->
+            <hr>
+            <p>Tom is '{{ friends['Tom'] }}' years old.</p>
+
+            <!-- Access List member -->
+            <h4>Access List member</h4>
+            <hr>
+            <p>{{ langs[1] }}</p>
+
+            <!-- Unpack Tuple variables -->
+            <h4>Unpack Tuple variables</h4>
+            <hr>
+            {% set a, b = colors %}
+            <p>{{ a }}</p>
+            <p>{{ b }}</p>
+
+            <!-- Access class attributes -->
+            <h4>Access Class Attribs</h4>
+            <hr>
+            <p>{{ my_remote.name }}</p>
+            
+            
             
         </div>
     </div>

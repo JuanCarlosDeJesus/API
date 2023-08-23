@@ -20,7 +20,7 @@ def jinja():
         'Tony': 56,
         'Clarissa': 23
         }
-    colors = ['Red','Green']
+    colors = ('Red','Green')
     cool = True
     
     class GitRemote:
