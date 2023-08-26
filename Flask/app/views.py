@@ -3,6 +3,14 @@ from app import app
 
 from flask import render_template
 
+from datetime import datetime
+
+
+# custom Fileter
+@app.template_filter("clean_date")
+def clean_date(dt):
+    return dt.strftime('%d %b %Y')
+
 # create route decorator
 @app.route("/")
 def index():
@@ -43,6 +51,8 @@ def jinja():
     
     def repeat(x, qty):
         return x * qty
+
+    date = datetime.utcnow()
               
     
     return render_template("public/jinja.html",
@@ -54,7 +64,8 @@ def jinja():
                             cool=cool,
                             GitRemote=GitRemote,
                             repeat=repeat,
-                            my_remote=my_remote
+                            my_remote=my_remote,
+                            date=date
                             )
 
 # create /about decorator
