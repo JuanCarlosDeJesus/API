@@ -69,7 +69,38 @@
             <h4>Access Class Attribs</h4>
             <hr>
             <p>{{ my_remote.name }}</p>
+
+            <!-- Call a function -->
+            <h4>Call a Function</h4>
+            <hr>
+            <p>{{ repeat('Flask is AWESOME! ', 2) }}</p>
+
+            <!-- Call a class -->
+            <h4>Call a Class method</h4>
+            <hr>
+            <p>{{ my_remote.clone() }}</p>
+
+            <!-- Conditionals -->
+            <h4>Conditionals</h4>
+            <hr>
+            {% if cool %}
+                <p>Cool is {{ cool }}</p>
+            {% endif %}
             
+            <h4>Conditionals with comparison</h4>
+            <hr>
+            {% if age < 18 %}
+                <p>No Entry</p>
+            {% elif age < 26 %}
+                <p>Nearly old enough</p>
+            {% else %}
+                <p>You may enter</p>
+            {% endif %}
+
+            <h4>Math</h4>
+            <hr>
+            <p>{{ age / 2 }}</p>
+
             
             
         </div>
