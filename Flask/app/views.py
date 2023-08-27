@@ -53,6 +53,10 @@ def jinja():
         return x * qty
 
     date = datetime.utcnow()
+    
+    my_html = "<h1>THIS IS SOME HTML</h1>"
+    
+    suspicious = "<script>alert('YOU GOT HACKED!'}</script>"
               
     
     return render_template("public/jinja.html",
@@ -65,7 +69,9 @@ def jinja():
                             GitRemote=GitRemote,
                             repeat=repeat,
                             my_remote=my_remote,
-                            date=date
+                            date=date,
+                            my_html=my_html,
+                            suspicious=suspicious
                             )
 
 # create /about decorator
