@@ -1,5 +1,7 @@
 {% extends "public/templates/public_template.html" %}
 
+{% import "macros/input_macros.html" as im %}
+
 {% block title %}Jinja{% endblock %}
 
 {% block main %}
@@ -128,14 +130,14 @@
 
             <h4>Macro</h4>
             <hr>
-            {% macro input(label="", type="text", name="", id="", placeholder="") -%}
-            <div class="form-group">
-                <label>{{ label }}</label>
-                <input class="form-control" type="{{ type }}" name="{{ name }}" id="{{ id }}" placeholder="{{ placeholder }}">
-            </div>
-            {%- endmacro %}
+            
+            <!-- We imported the macro input_macros.html as im -->
 
-            {{ input(label="Your name", name="name", id="name", placeholder="Please enter your name") }}
+            {{ im.input(label="Your Name", name="name", id="name", placeholder="Please enter your name") }}
+
+            {{ im.input(label="Your Age", type="number", name="age", id="age", placeholder="Please enter your age") }}
+
+            {{ im.input(label="Your Password", type="password", name="password", id="password", placeholder="Please enter your password") }}
 
             
         </div>
