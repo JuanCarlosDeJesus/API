@@ -56,7 +56,7 @@ def jinja():
     
     my_html = "<h1>THIS IS SOME HTML</h1>"
     
-    suspicious = "<script>alert('YOU GOT HACKED!'}</script>"
+    suspicious = "<script>alert('YOU GOT HACKED!')</script>"
               
     
     return render_template("public/jinja.html",
