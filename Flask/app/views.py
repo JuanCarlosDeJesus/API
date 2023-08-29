@@ -78,3 +78,8 @@ def jinja():
 @app.route("/about")
 def about():
     return render_template("public/about.html")
+
+# create a /sign-up decorator
+@app.route("/sign-up")
+def sign_up():
+    return render_template("public/sign_up.html")
