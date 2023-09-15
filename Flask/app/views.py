@@ -95,3 +95,12 @@ def sign_up():
     
     
     return render_template("public/sign_up.html")
+
+
+# adding dynamic url via the <> and variable
+@app.route("/profile/<username>")
+def profile(username):
+    
+    print(username)
+    
+    return render_template("public/profile.html")
